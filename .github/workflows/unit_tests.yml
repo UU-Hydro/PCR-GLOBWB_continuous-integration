@@ -1,0 +1,20 @@
+name: unit_tests
+
+on: [pull_request]
+
+jobs:
+  simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout model repository
+        uses: actions/checkout@v4
+        
+      - name: setup environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: pcrglobwb_ci
+
+      - name: run tests
+        run: |
+          conda run -n pcrglobwb_ci python test_assert_simulation.py

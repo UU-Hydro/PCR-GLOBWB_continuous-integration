@@ -1,4 +1,4 @@
-name: ci
+name: pcrglobwb_ci
 channels:
   - conda-forge
 dependencies:

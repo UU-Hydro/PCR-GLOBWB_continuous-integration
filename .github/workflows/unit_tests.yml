@@ -1,6 +1,6 @@
 name: unit_tests
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   simulation:

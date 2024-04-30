@@ -1,10 +1,7 @@
 #!/bin/bash
 
-## Assert simulation
-reference_dir=./simulation/reference_output/release_v2.4.0_alpha/RhineMeuse_30min_natural/netcdf/
-comparison_dir=./simulation/output/RhineMeuse_30min_natural/netcdf/
-python ./assert_simulation_netcdf.py $reference_dir $comparison_dir
-
-reference_dir=./simulation/reference_output/release_v2.4.0_alpha/RhineMeuse_30min_natural/states/
-comparison_dir=./simulation/output/RhineMeuse_30min_natural/states/
-python ./assert_simulation_states.py $reference_dir $comparison_dir
+python run_assert_simulation.py
+if [ $? -ne 0 ]; then
+    echo "ERROR: Simulation assertion failed"
+    exit 1
+fi

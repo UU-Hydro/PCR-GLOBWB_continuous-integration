@@ -3,7 +3,7 @@ import pathlib as pl
 from assert_simulation_netcdf import assert_simulation_netcdf
 from assert_simulation_states import assert_simulation_states
 
-reference = "release_v2.4.0_alpha"
+reference = "latest_main"
 reference_dir = pl.Path("./simulation/reference_output").absolute()
 comparison_dir = pl.Path("./simulation/output").absolute()
 

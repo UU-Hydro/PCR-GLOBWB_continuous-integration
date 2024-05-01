@@ -4,7 +4,7 @@ import unittest
 from unit_tests.TestAssertSimulationNetcdf import TestAssertSimulationNetcdf
 from unit_tests.TestAssertSimulationStates import TestAssertSimulationStates
 
-reference = "release_v2.4.0_alpha"
+reference = "latest_main"
 reference_dir = pl.Path("./simulation/reference_output").absolute()
 comparison_dir = pl.Path("./simulation/comparison_output").absolute()
 

@@ -12,6 +12,8 @@ if __name__ == '__main__':
     assert_any = False
 
     for configuration in configurations:
+        print(f'configuration {configuration}')
+        
         configuration_reference_dir = reference_dir / reference / configuration
         configuration_comparison_dir = comparison_dir / configuration
         
@@ -26,4 +28,4 @@ if __name__ == '__main__':
                                 comparison_dir = configuration_comparison_dir / "states")
         
     if not assert_any:
-        raise ValueError("ERROR: No directories to assert.")
+        raise FileNotFoundError("ERROR: No directories to assert.")
